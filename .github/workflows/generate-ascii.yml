@@ -8,21 +8,19 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
-    
-      - name: Install coway Program
+        uses: actions/checkout@v4
+
+      - name: Install cowsay Program
         run: sudo apt-get install cowsay -y
 
-      - name: Generate ASCII Artworks
-        run: cowsay -f drgon "Run for cover, I am a DRAGON..RAWR" >> dragon.txt
-      
-      - name: Test file Exists
-        run: grep -i dragon "dragon.txt"
+      - name: Generate ASCII Artwork
+        run: cowsay -f dragon "Run for cover, I am a DRAGON..RAWR" > dragon.txt
 
-      - name: Read File
-        run: cat dragon.tx
+      - name: Test file exists
+        run: grep -i dragon dragon.txt
 
-      - name: list repo files
+      - name: Read file
+        run: cat dragon.txt
+
+      - name: List repository files
         run: ls -ltra
-
-   

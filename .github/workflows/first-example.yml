@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: list and read file
         run: |
@@ -18,6 +18,6 @@ jobs:
           cat README.md
 
       - name: Generate ASCII Artworks
-        run: cowsay -f drgon "Run for cover, I am a DRAFON..RAWR" >> dragon.txt
+        run: cowsay -f dragon "Run for cover, I am a DRAFON..RAWR" >> dragon.txt
 
         
