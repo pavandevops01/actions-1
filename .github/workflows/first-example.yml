@@ -15,7 +15,7 @@ jobs:
         run: echo "My First GitHub Action Job"
 
       - name: List files
-        run: ls
+        run: ls -a
 
       - name: Read file
         run: cat README.md
