@@ -1,6 +1,6 @@
 name: My First Workflow
 
-on: 
+on:
   push:
 
 jobs:
@@ -8,17 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repo
-      - uses: actions/checkout@v7
-      
+        uses: actions/checkout@v4
+
       - name: Welcome message
         run: echo "My First GitHub Action Job"
-    
+
       - name: List files
         run: ls
 
       - name: Read file
         run: cat README.md
-
         
