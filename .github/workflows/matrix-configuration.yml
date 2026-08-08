@@ -2,8 +2,8 @@ name: Matrix Configuration
 on:
     push:
     workflow_dispatch:
-jobs:
-    deploy-on-ubuntu:
+    jobs:
+      deploy-on-ubuntu:
         runs-on: ubuntu-latest
         steps:
             - name: Echo Docker Details
@@ -12,7 +12,7 @@ jobs:
             - name: Run Images
               run: docker run hello-world
 
-     deploy-on-windows:
+      deploy-on-windows:
         runs-on: windows-latest
         steps:
             - name: Echo Docker Details
