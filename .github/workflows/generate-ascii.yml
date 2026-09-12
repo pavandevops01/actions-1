@@ -18,7 +18,7 @@ jobs:
             run: grep -i "dragon" dragon.txt
           
           - name: Read file
-            run: dragon dragon.txt
+            run: cat dragon.txt
 
           - name: List Repo files
             run: ls -ltra
