@@ -11,10 +11,10 @@ jobs:
           - name: Install cowsay Program
             run: sudo apt-get install cowsay -y
 
-          - name: Generate ASCII Artwork
+          - name: Execute cowsay CMD
             run: cowsay -f dragon "Run for cover, I am a CAT...meow" >> dragon.txt
             
-          - name: Test file
+          - name: Test file Exists
             run: grep -i "dragon" dragon.txt
           
           - name: Read file
