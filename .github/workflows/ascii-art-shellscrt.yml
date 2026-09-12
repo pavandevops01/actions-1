@@ -12,4 +12,6 @@ jobs:
         run: ls -ltra
       
       - name: Executing Shell schell script 
-        run: ./ascii-schell.sh
+        run: |
+          chmod +x ascii-schell.sh
+          ./ascii-schell.sh
