@@ -1,4 +1,4 @@
-name: Job concurrency matrix
+name: Job concurrency at job level
 
 on: workflow_dispatch
 
@@ -21,6 +21,9 @@ jobs:
               run: echo docker push docker.io/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
     deploy:
         needs: docker
+        concurrency:
+          group: production-deployment
+          cancel-in-progress: true
         runs-on: ubuntu-latest
         steps:
             - name: Docker Run
