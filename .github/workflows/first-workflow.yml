@@ -7,11 +7,13 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v7
-            - name: Welcome Message
-              run: echo "My first gihub actions job"
 
-            - name: List Files
-              run: ls
-
-            - name: Read file
-              run: cat README.md
+            - name: List and Read file
+              run: |
+                echo "My first gihub actions job"
+                ls -ltra
+                cat README.md
+                
+            - name: Generate ASCII Artwork
+              run: cowsay -f cat "Run for cover, I am a CAT...meow" >> cat.txt
+                   
