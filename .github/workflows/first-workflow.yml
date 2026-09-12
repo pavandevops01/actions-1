@@ -13,7 +13,7 @@ jobs:
                 echo "My first gihub actions job"
                 ls -ltra
                 cat README.md
-                
+
             - name: Generate ASCII Artwork
               run: cowsay -f cat "Run for cover, I am a CAT...meow" >> cat.txt
                    
