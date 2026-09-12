@@ -1,4 +1,4 @@
-name: My first work flow
+name: My ascii art work flow
 on: push
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
             run: cowsay -f dragon "Run for cover, I am a CAT...meow" >> dragon.txt
             
           - name: Test file
-            run: grep -i dragon dragon.txt
+            run: grep -i "dragon" dragon.txt
           
           - name: Read file
             run: cat dragon.txt
