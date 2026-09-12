@@ -1,0 +1,15 @@
+name: ascii-art schellscript workflow
+on: push
+
+jobs:
+  ascii_art_job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v7
+
+      - name: List Repo Files
+        run: ls -ltra
+      
+      - name: Executing Shell schell script 
+        run: ./ascii-schell.sh
